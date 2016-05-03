@@ -1,10 +1,10 @@
-# OpenVPN for Docker
+# OpenVPN for Docker (armv7/armhf version)
 
 Quick instructions:
 
 ```bash
-CID=$(docker run -d --privileged -p 1194:1194/udp -p 443:443/tcp jpetazzo/dockvpn)
-docker run -t -i -p 8080:8080 --volumes-from $CID jpetazzo/dockvpn serveconfig
+CID=$(docker run -d --privileged -p 1194:1194/udp -p 443:443/tcp 23ua/dockvpn-armv7)
+docker run -t -i -p 8080:8080 --volumes-from $CID 23ua/dockvpn-armv7 serveconfig
 ```
 
 Now download the file located at the indicated URL. You will get a
